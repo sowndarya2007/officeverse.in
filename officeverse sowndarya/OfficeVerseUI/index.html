@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>OfficeVerse - Dashboard</title>
+    <title>OfficeVerse - Unified Portal</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <!-- Sidebar Navigation -->
     <aside class="sidebar" id="sidebar">
         <div class="sidebar-header">
             <div class="logo">
@@ -22,30 +21,24 @@
                 <i class="fas fa-times"></i>
             </button>
         </div>
-        
         <nav class="sidebar-nav">
-            <a href="index.html" class="nav-item active">
-                <i class="fas fa-home"></i>
-                <span>Dashboard</span>
-            </a>
-            <a href="events.html" class="nav-item">
+            <a href="#events" class="nav-item">
                 <i class="fas fa-calendar-alt"></i>
                 <span>Events</span>
             </a>
-            <a href="announcements.html" class="nav-item">
+            <a href="#announcements" class="nav-item">
                 <i class="fas fa-bullhorn"></i>
                 <span>Announcements</span>
             </a>
-            <a href="directory.html" class="nav-item">
+            <a href="#directory" class="nav-item">
                 <i class="fas fa-users"></i>
                 <span>Directory</span>
             </a>
-            <a href="resources.html" class="nav-item">
+            <a href="#resources" class="nav-item">
                 <i class="fas fa-folder-open"></i>
                 <span>Resources</span>
             </a>
         </nav>
-        
         <div class="sidebar-footer">
             <button class="theme-toggle" id="themeToggle">
                 <i class="fas fa-moon"></i>
@@ -58,9 +51,7 @@
         </div>
     </aside>
 
-    <!-- Main Content Area -->
     <main class="main-content">
-        <!-- Top Navbar -->
         <header class="top-navbar">
             <div class="navbar-left">
                 <button class="menu-toggle" id="menuToggle">
@@ -68,7 +59,7 @@
                 </button>
                 <div class="search-bar">
                     <i class="fas fa-search"></i>
-                    <input type="text" placeholder="Search...">
+                    <input type="text" placeholder="Search resources, events, announcements, employees...">
                 </div>
             </div>
             <div class="navbar-right">
@@ -82,7 +73,6 @@
             </div>
         </header>
 
-        <!-- Dashboard Content -->
         <div class="content-area">
             <div class="page-header">
                 <div class="page-header-content">
@@ -91,7 +81,6 @@
                 </div>
             </div>
 
-            <!-- Welcome Card -->
             <div class="welcome-card">
                 <div class="welcome-content">
                     <h2>Welcome back, John!</h2>
@@ -102,7 +91,6 @@
                 </div>
             </div>
 
-            <!-- Info Cards Grid -->
             <div class="info-cards-grid">
                 <div class="info-card">
                     <div class="card-icon">
@@ -115,7 +103,6 @@
                         <a href="events.html" class="card-link">View all events</a>
                     </div>
                 </div>
-
                 <div class="info-card">
                     <div class="card-icon">
                         <i class="fas fa-chart-bar"></i>
@@ -127,7 +114,6 @@
                         <a href="#" class="card-link">View details</a>
                     </div>
                 </div>
-
                 <div class="info-card">
                     <div class="card-icon">
                         <i class="fas fa-external-link-alt"></i>
@@ -140,12 +126,942 @@
                     </div>
                 </div>
             </div>
+
+            <section id="events">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1>Events</h1>
+                        <p>View and manage company events</p>
+                    </div>
+                </div>
+                <div class="events-layout">
+                    <div class="calendar-section">
+                        <div class="calendar-header">
+                            <h2>July 2025</h2>
+                            <div class="calendar-nav">
+                                <button class="nav-btn"><i class="fas fa-chevron-left"></i></button>
+                                <button class="nav-btn"><i class="fas fa-chevron-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="calendar-grid">
+                            <div class="calendar-day-header">Sun</div>
+                            <div class="calendar-day-header">Mon</div>
+                            <div class="calendar-day-header">Tue</div>
+                            <div class="calendar-day-header">Wed</div>
+                            <div class="calendar-day-header">Thu</div>
+                            <div class="calendar-day-header">Fri</div>
+                            <div class="calendar-day-header">Sat</div>
+                            <div class="calendar-day inactive">29</div>
+                            <div class="calendar-day inactive">30</div>
+                            <div class="calendar-day">1</div>
+                            <div class="calendar-day">2</div>
+                            <div class="calendar-day">3</div>
+                            <div class="calendar-day">4</div>
+                            <div class="calendar-day">5</div>
+                            <div class="calendar-day">6</div>
+                            <div class="calendar-day">7</div>
+                            <div class="calendar-day">8</div>
+                            <div class="calendar-day">9</div>
+                            <div class="calendar-day">10</div>
+                            <div class="calendar-day selected">11</div>
+                            <div class="calendar-day">12</div>
+                            <div class="calendar-day has-event">13</div>
+                            <div class="calendar-day">14</div>
+                            <div class="calendar-day has-event">15</div>
+                            <div class="calendar-day">16</div>
+                            <div class="calendar-day">17</div>
+                            <div class="calendar-day">18</div>
+                            <div class="calendar-day">19</div>
+                            <div class="calendar-day">20</div>
+                            <div class="calendar-day has-event">21</div>
+                            <div class="calendar-day">22</div>
+                            <div class="calendar-day">23</div>
+                            <div class="calendar-day">24</div>
+                            <div class="calendar-day">25</div>
+                            <div class="calendar-day">26</div>
+                            <div class="calendar-day">27</div>
+                            <div class="calendar-day">28</div>
+                            <div class="calendar-day">29</div>
+                            <div class="calendar-day">30</div>
+                            <div class="calendar-day">31</div>
+                            <div class="calendar-day inactive">1</div>
+                            <div class="calendar-day inactive">2</div>
+                        </div>
+                    </div>
+                    <div class="events-list-section">
+                        <div class="events-header">
+                            <h3>Events for July 11, 2025</h3>
+                            <button class="add-event-btn">
+                                <i class="fas fa-plus"></i>
+                                Add Event
+                            </button>
+                        </div>
+                        <div class="events-list">
+                            <div class="event-item">
+                                <div class="event-time">
+                                    <span class="time">10:00 AM</span>
+                                    <span class="duration">1 hour</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Team Stand-up Meeting</h4>
+                                    <p>Daily sync with the development team</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-map-marker-alt"></i>
+                                            Conference Room A
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users"></i>
+                                            8 attendees
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">
+                                    <span class="time">2:00 PM</span>
+                                    <span class="duration">2 hours</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Project Review Session</h4>
+                                    <p>Quarterly review of ongoing projects</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-video"></i>
+                                            Video Conference
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users"></i>
+                                            12 attendees
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="event-item">
+                                <div class="event-time">
+                                    <span class="time">4:30 PM</span>
+                                    <span class="duration">30 min</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Coffee Break & Networking</h4>
+                                    <p>Informal networking session</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-coffee"></i>
+                                            Cafeteria
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users"></i>
+                                            All welcome
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="announcements">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1>Announcements</h1>
+                        <p>Stay updated with company news and updates</p>
+                    </div>
+                    <button class="add-announcement-btn">
+                        <i class="fas fa-plus"></i>
+                        Add Announcement
+                    </button>
+                </div>
+                <div class="announcements-container">
+                    <div class="announcement-card priority-high">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="priority-badge">High Priority</span>
+                                <span class="announcement-date">July 10, 2025</span>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Office Closure - July 15th</h3>
+                        <div class="announcement-author">
+                            <img src="https://via.placeholder.com/32x32/8b5cf6/ffffff?text=HR" alt="HR" class="author-pic">
+                            <span class="author-name">HR Department</span>
+                        </div>
+                        <p class="announcement-content">
+                            Please note that the office will be closed on July 15th for facility maintenance.
+                            All employees are requested to work from home on this day. Regular operations will resume on July 16th.
+                        </p>
+                        <div class="announcement-footer">
+                            <span class="read-more">Read more</span>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    24
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment"></i>
+                                    8
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="announcement-date">July 9, 2025</span>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>New Employee Wellness Program</h3>
+                        <div class="announcement-author">
+                            <img src="https://via.placeholder.com/32x32/10b981/ffffff?text=WC" alt="Wellness Committee" class="author-pic">
+                            <span class="author-name">Wellness Committee</span>
+                        </div>
+                        <p class="announcement-content">
+                            We're excited to announce the launch of our new employee wellness program!
+                            This includes gym memberships, mental health resources, and flexible work arrangements.
+                        </p>
+                        <div class="announcement-footer">
+                            <span class="read-more">Read more</span>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    56
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment"></i>
+                                    15
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="announcement-date">July 8, 2025</span>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Q3 Performance Reviews</h3>
+                        <div class="announcement-author">
+                            <img src="https://via.placeholder.com/32x32/f59e0b/ffffff?text=MG" alt="Management" class="author-pic">
+                            <span class="author-name">Management Team</span>
+                        </div>
+                        <p class="announcement-content">
+                            Q3 performance reviews will begin next week. Please ensure all self-assessments
+                            are completed by July 20th. Schedule meetings with your direct supervisor by July 18th.
+                        </p>
+                        <div class="announcement-footer">
+                            <span class="read-more">Read more</span>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    18
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment"></i>
+                                    6
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="announcement-date">July 7, 2025</span>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Technology Upgrade Schedule</h3>
+                        <div class="announcement-author">
+                            <img src="https://via.placeholder.com/32x32/3b82f6/ffffff?text=IT" alt="IT Department" class="author-pic">
+                            <span class="author-name">IT Department</span>
+                        </div>
+                        <p class="announcement-content">
+                            We will be upgrading our network infrastructure over the weekend.
+                            There may be brief internet outages on Saturday between 2-4 AM. All systems should be fully operational by Monday morning.
+                        </p>
+                        <div class="announcement-footer">
+                            <span class="read-more">Read more</span>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    12
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment"></i>
+                                    3
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="announcement-date">July 5, 2025</span>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn">
+                                    <i class="fas fa-bookmark"></i>
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-share"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Company Summer BBQ</h3>
+                        <div class="announcement-author">
+                            <img src="https://via.placeholder.com/32x32/ec4899/ffffff?text=SC" alt="Social Committee" class="author-pic">
+                            <span class="author-name">Social Committee</span>
+                        </div>
+                        <p class="announcement-content">
+                            Join us for our annual summer BBQ on July 25th at City Park!
+                            Food, games, and fun activities for the whole family. RSVP by July 20th.
+                        </p>
+                        <div class="announcement-footer">
+                            <span class="read-more">Read more</span>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart"></i>
+                                    89
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment"></i>
+                                    34
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="directory">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1>Employee Directory</h1>
+                        <p>Find and connect with your colleagues</p>
+                    </div>
+                </div>
+                <div class="directory-filters">
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">All Departments</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="design">Design</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="sales">Sales</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">All Roles</option>
+                            <option value="manager">Manager</option>
+                            <option value="senior">Senior</option>
+                            <option value="junior">Junior</option>
+                            <option value="intern">Intern</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <select class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="office">Office</option>
+                            <option value="remote">Remote</option>
+                            <option value="hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="employee-grid">
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/6366f1/ffffff?text=AS" alt="Alice Smith">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Alice Smith</h3>
+                            <p class="employee-role">Senior Software Engineer</p>
+                            <p class="employee-department">Engineering</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    alice.smith@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 123-4567
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/10b981/ffffff?text=BJ" alt="Bob Johnson">
+                            <div class="status-indicator busy"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Bob Johnson</h3>
+                            <p class="employee-role">Product Manager</p>
+                            <p class="employee-department">Product</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    bob.johnson@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 234-5678
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/f59e0b/ffffff?text=CD" alt="Carol Davis">
+                            <div class="status-indicator offline"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Carol Davis</h3>
+                            <p class="employee-role">UX Designer</p>
+                            <p class="employee-department">Design</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    carol.davis@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 345-6789
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/8b5cf6/ffffff?text=DW" alt="David Wilson">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>David Wilson</h3>
+                            <p class="employee-role">Marketing Manager</p>
+                            <p class="employee-department">Marketing</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    david.wilson@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 456-7890
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/ec4899/ffffff?text=EM" alt="Emma Martinez">
+                            <div class="status-indicator busy"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Emma Martinez</h3>
+                            <p class="employee-role">HR Specialist</p>
+                            <p class="employee-department">Human Resources</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    emma.martinez@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 567-8901
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/14b8a6/ffffff?text=FT" alt="Frank Taylor">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Frank Taylor</h3>
+                            <p class="employee-role">Sales Representative</p>
+                            <p class="employee-department">Sales</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    frank.taylor@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 678-9012
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/ef4444/ffffff?text=GA" alt="Grace Anderson">
+                            <div class="status-indicator offline"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Grace Anderson</h3>
+                            <p class="employee-role">Financial Analyst</p>
+                            <p class="employee-department">Finance</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    grace.anderson@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 789-0123
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://via.placeholder.com/80x80/06b6d4/ffffff?text=HB" alt="Henry Brown">
+                            <div class="status-indicator online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Henry Brown</h3>
+                            <p class="employee-role">DevOps Engineer</p>
+                            <p class="employee-department">Engineering</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope"></i>
+                                    henry.brown@company.com
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone"></i>
+                                    +1 (555) 890-1234
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary">
+                                    <i class="fas fa-envelope"></i>
+                                    Message
+                                </button>
+                                <button class="action-btn">
+                                    <i class="fas fa-phone"></i>
+                                    Call
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="resources">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1>Resources</h1>
+                        <p>Access company tools, documents, and helpful resources</p>
+                    </div>
+                </div>
+                <div class="resource-categories">
+                    <div class="category-section">
+                        <h2>
+                            <i class="fas fa-tools"></i>
+                            Business Tools
+                        </h2>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Email Portal</h3>
+                                    <p>Access your company email account and manage messages</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">External Tool</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Open
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-project-diagram"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Project Management</h3>
+                                    <p>Track projects, assign tasks, and collaborate with teams</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Web App</span>
+                                        <span class="resource-access">Team Leads</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Open
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-chart-line"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Analytics Dashboard</h3>
+                                    <p>View business metrics, reports, and performance data</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Dashboard</span>
+                                        <span class="resource-access">Managers</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Open
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-comments"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Team Chat</h3>
+                                    <p>Instant messaging and group communication platform</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Chat App</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Open
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-section">
+                        <h2>
+                            <i class="fas fa-file-alt"></i>
+                            Documents & Templates
+                        </h2>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-contract"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Employee Handbook</h3>
+                                    <p>Complete guide to company policies and procedures</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">PDF Document</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-download"></i>
+                                        Download
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-invoice"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Expense Report Template</h3>
+                                    <p>Standard template for submitting business expenses</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Excel Template</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-download"></i>
+                                        Download
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-presentation"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Brand Guidelines</h3>
+                                    <p>Logo usage, color palette, and brand identity guidelines</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Design Guide</span>
+                                        <span class="resource-access">Marketing Team</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-download"></i>
+                                        Download
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-section">
+                        <h2>
+                            <i class="fas fa-graduation-cap"></i>
+                            Training & Development
+                        </h2>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-play-circle"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>New Employee Orientation</h3>
+                                    <p>Welcome course for new team members</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Video Course</span>
+                                        <span class="resource-access">New Hires</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-play"></i>
+                                        Start Course
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-shield-alt"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Security Training</h3>
+                                    <p>Cybersecurity awareness and best practices</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Interactive Course</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-play"></i>
+                                        Start Course
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Technical Skills Library</h3>
+                                    <p>Programming tutorials and development resources</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Learning Portal</span>
+                                        <span class="resource-access">Engineering Team</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Browse
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="category-section">
+                        <h2>
+                            <i class="fas fa-life-ring"></i>
+                            Support & Help
+                        </h2>
+                        <div class="resource-grid">
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-question-circle"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Help Desk</h3>
+                                    <p>Submit IT support tickets and track issues</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Support Portal</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Submit Ticket
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-book"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Knowledge Base</h3>
+                                    <p>Frequently asked questions and how-to guides</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Documentation</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <button class="resource-btn primary">
+                                        <i class="fas fa-external-link-alt"></i>
+                                        Browse
+                                    </button>
+                                    <button class="resource-btn">
+                                        <i class="fas fa-bookmark"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
     </main>
 
-    <!-- Overlay for mobile menu -->
     <div class="overlay" id="overlay"></div>
-
     <script src="script.js"></script>
 </body>
 </html>
