@@ -222,6 +222,13 @@ body::before {
   margin-bottom: 0;
 }
 
+.dev-card:hover {
+    background: var(--bg-hover, #4b5563);
+    border-radius: 6px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+}
+
+
 .main-content {
   margin-left: var(--sidebar-width);
   min-height: 100vh;
