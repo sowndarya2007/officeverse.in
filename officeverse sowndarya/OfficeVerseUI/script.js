@@ -50,7 +50,10 @@ function initializeMobileNavigation() {
 
   window.addEventListener('resize', debounce(() => {
     if (window.innerWidth > 768) {
-      toggleMobileMenu();
+      sidebar.classList.remove('active');
+      overlay.classList.remove('active');
+      document.body.style.overflow = '';
+      sidebar.setAttribute('aria-hidden', true);
     }
   }, 100));
 }
@@ -69,6 +72,7 @@ function initializeThemeToggle() {
     updateThemeToggleButton(theme, themeIcon, themeText);
     document.body.style.transition = 'background-color 0.3s ease';
     setTimeout(() => document.body.style.transition = '', 300);
+    themeToggle.setAttribute('aria-label', theme === 'dark' ? 'Switch to day shift' : 'Switch to night shift');
   };
 
   const currentTheme = localStorage.getItem('theme') || (prefersDarkScheme.matches ? 'dark' : 'light');
@@ -91,7 +95,7 @@ function initializeThemeToggle() {
 function updateThemeToggleButton(theme, icon, text) {
   if (icon && text) {
     icon.className = theme === 'dark' ? 'fas fa-sun' : 'fas fa-moon';
-    text.textContent = theme === 'dark' ? 'Light Mode' : 'Dark Mode';
+    text.textContent = theme === 'dark' ? 'Day shift' : 'Night shift';
   }
 }
 
@@ -107,9 +111,10 @@ function initializeSearchFunctionality() {
 
 function handleSearch(searchTerm) {
   console.log('Searching for:', searchTerm);
-  const path = window.location.pathname;
-  if (path.includes('announcements')) filterAnnouncements(searchTerm);
-  if (path.includes('directory')) filterEmployees(searchTerm);
+  const path = window.location.pathname + window.location.hash;
+  if (path.includes('announcements') || path.includes('#announcements')) filterAnnouncements(searchTerm);
+  if (path.includes('directory') || path.includes('#directory')) filterEmployees(searchTerm);
+  if (path.includes('resources') || path.includes('#resources')) filterResources(searchTerm);
 }
 
 function filterAnnouncements(searchTerm) {
@@ -131,6 +136,17 @@ function filterEmployees(searchTerm) {
     const role = card.querySelector('.employee-role')?.textContent.toLowerCase() || '';
     const department = card.querySelector('.employee-department')?.textContent.toLowerCase() || '';
     card.style.display = name.includes(searchTerm) || role.includes(searchTerm) || department.includes(searchTerm)
+      ? 'block'
+      : 'none';
+  });
+}
+
+function filterResources(searchTerm) {
+  const resources = document.querySelectorAll('.resource-card');
+  resources.forEach(card => {
+    const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+    const desc = card.querySelector('p')?.textContent.toLowerCase() || '';
+    card.style.display = title.includes(searchTerm) || desc.includes(searchTerm)
       ? 'block'
       : 'none';
   });
@@ -235,12 +251,9 @@ function initializeTooltips() {
     if (!element) return;
 
     const tooltipText = element.getAttribute('data-tooltip');
-    if (e.type === 'mouseenter') {
-      showTooltip(e, tooltipText);
-    } else {
-      hideTooltip();
-    }
+    showTooltip(e, tooltipText);
   });
+  document.body.addEventListener('mouseout', hideTooltip);
 }
 
 function showTooltip(event, text) {
@@ -274,23 +287,18 @@ function hideTooltip() {
 
 function setActiveNavigation() {
   const navItems = document.querySelectorAll('.nav-item');
-  const currentPath = window.location.pathname;
-
+  const hash = window.location.hash || '#events';
   navItems.forEach(item => {
-    const href = item.getAttribute('href');
-    item.classList.toggle('active', 
-      (currentPath === '/' || currentPath.endsWith('index.html')) && href === 'index.html' ||
-      (href !== 'index.html' && currentPath.includes(href.replace('.html', '')))
-    );
+    item.classList.toggle('active', item.getAttribute('href') === hash);
   });
 }
 
 function initializeSmoothScrolling() {
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', (e) => {
-      e.preventDefault();
       const target = document.querySelector(link.getAttribute('href'));
       if (target) {
+        e.preventDefault();
         target.scrollIntoView({ behavior: 'smooth', block: 'start' });
       }
     });
@@ -299,24 +307,29 @@ function initializeSmoothScrolling() {
 
 function initializeLazyLoading() {
   const images = document.querySelectorAll('img[data-src]');
-  const observer = new IntersectionObserver((entries, obs) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const img = entry.target;
-        img.src = img.getAttribute('data-src');
-        img.removeAttribute('data-src');
-        obs.unobserve(img);
-      }
-    });
-  }, { rootMargin: '0px 0px 100px 0px' });
+  if ('IntersectionObserver' in window) {
+    const observer = new IntersectionObserver((entries, obs) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          const img = entry.target;
+          img.src = img.getAttribute('data-src');
+          img.removeAttribute('data-src');
+          obs.unobserve(img);
+        }
+      });
+    }, { rootMargin: '0px 0px 100px 0px' });
 
-  images.forEach(img => observer.observe(img));
+    images.forEach(img => observer.observe(img));
+  }
 }
 
 function initializeKeyboardNavigation() {
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape') {
-      initializeMobileNavigation();
+      document.getElementById('sidebar')?.classList.remove('active');
+      document.getElementById('overlay')?.classList.remove('active');
+      document.body.style.overflow = '';
+      document.getElementById('sidebar')?.setAttribute('aria-hidden', true);
     }
     if (e.ctrlKey && e.shiftKey && e.key === 'T') {
       document.getElementById('themeToggle')?.click();
@@ -330,14 +343,17 @@ function initializeKeyboardNavigation() {
 
 function optimizePerformance() {
   const scrollHandler = throttle(() => {
-    // Handle scroll-based animations or effects
+    // Handle scroll-based animations or effects here if needed
   }, 100);
 
   window.addEventListener('scroll', scrollHandler);
 
   window.addEventListener('resize', debounce(() => {
     if (window.innerWidth > 768) {
-      initializeMobileNavigation();
+      document.getElementById('sidebar')?.classList.remove('active');
+      document.getElementById('overlay')?.classList.remove('active');
+      document.body.style.overflow = '';
+      document.getElementById('sidebar')?.setAttribute('aria-hidden', true);
     }
   }, 250));
 }
@@ -377,6 +393,7 @@ window.OfficeVerse = {
   handleSearch,
   filterAnnouncements,
   filterEmployees,
+  filterResources,
   debounce,
   throttle
 };
