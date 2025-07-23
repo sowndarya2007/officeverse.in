@@ -1,0 +1,1134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="OfficeVerse - Your unified company portal for events, announcements, employee directory, and resources.">
+    <meta name="keywords"
+        content="OfficeVerse, company portal, employee dashboard, events, announcements, directory, resources">
+    <meta name="author" content="OfficeVerse Team">
+    <title>OfficeVerse - Unified Company Portal</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/png" href="/favicon.png">
+</head>
+
+<body>
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+        <div class="sidebar-header">
+            <div class="logo">
+                <i class="fas fa-building" aria-hidden="true"></i>
+                <span class="logo-text">OfficeVerse</span>
+            </div>
+            <button class="sidebar-toggle" id="sidebarToggle" aria-label="Toggle sidebar">
+                <i class="fas fa-times" aria-hidden="true"></i>
+            </button>
+        </div>
+        <nav class="sidebar-nav" aria-label="Sidebar navigation">
+            <a href="#events" class="nav-item" aria-current="page">
+                <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+                <span>Events</span>
+            </a>
+            <a href="#announcements" class="nav-item">
+                <i class="fas fa-bullhorn" aria-hidden="true"></i>
+                <span>Announcements</span>
+            </a>
+            <a href="#directory" class="nav-item">
+                <i class="fas fa-users" aria-hidden="true"></i>
+                <span>Directory</span>
+            </a>
+            <a href="#resources" class="nav-item">
+                <i class="fas fa-folder-open" aria-hidden="true"></i>
+                <span>Resources</span>
+            </a>
+        </nav>
+        <div class="sidebar-footer">
+            <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode">
+                <i class="fas fa-moon" aria-hidden="true"></i>
+                <span>Dark Mode</span>
+            </button>
+            <div class="developer-info" aria-label="Developer Info">
+                <h4
+                    style="margin: 1rem 0 0.5rem 0; font-size: 1rem; color: var(--text-secondary); letter-spacing: 0.5px;">
+                    Developers
+                </h4>
+                <div class="dev-cards">
+                    <a href="https://www.linkedin.com/in/sowndarya-manickam-595724370" target="_blank" rel="noopener"
+                        class="dev-card"
+                        style="display:flex;align-items:center;gap:0.75rem;margin-bottom:0.5rem;text-decoration:none;cursor:pointer;">
+                        <img src="https://i.pinimg.com/1200x/69/a5/60/69a5602fb6377d1fef9bb45e8db9e415.jpg"
+                            alt="Sowndarya" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+                        <div>
+                            <div style="font-weight:600;color:var(--text-primary);">Sowndarya</div>
+                            <div style="font-size:0.9em;color:var(--text-secondary);">Software Developer</div>
+                        </div>
+                    </a>
+                    <a href="https://www.linkedin.com/in/dhanasekar-murugesan-a9321731a" target="_blank" rel="noopener"
+                        class="dev-card"
+                        style="display:flex;align-items:center;gap:0.75rem;text-decoration:none;cursor:pointer;">
+                        <img src="https://i.pinimg.com/736x/74/f2/ff/74f2ffe6b9e1306043ec6ebc91683693.jpg"
+                            alt="Dhanasekar" style="width:36px;height:36px;border-radius:50%;object-fit:cover;">
+                        <div>
+                            <div style="font-weight:600;color:var(--text-primary);">Dhanasekar</div>
+                            <div style="font-size:0.9em;color:var(--text-secondary);">Software Developer</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+    </aside>
+
+    <main class="main-content" id="main-content">
+        <header class="top-navbar" role="banner">
+            <div class="navbar-left">
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars" aria-hidden="true"></i>
+                </button>
+                <div class="search-bar">
+                    <i class="fas fa-search" aria-hidden="true"></i>
+                    <input type="search" id="globalSearch"
+                        placeholder="Search resources, events, announcements, employees..."
+                        aria-label="Search OfficeVerse">
+                </div>
+            </div>
+            <div class="navbar-right">
+                <div class="user-profile" role="region" aria-label="User profile">
+                    <img src="https://images.pexels.com/photos/91227/pexels-photo-91227.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                        alt="John Doe - Charming Professional"
+                        style="width: 60px; height: 60px; border-radius: 50%; object-fit: cover; border: 2px solid #100f0f;">
+
+                    <div class="user-info">
+                        <span class="greeting">Good morning,</span>
+                        <span class="user-name">John Doe</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <div class="content-area">
+            <section class="page-header" aria-labelledby="dashboard-title">
+                <div class="page-header-content">
+                    <h1 id="dashboard-title">Dashboard</h1>
+                    <p>Welcome to your OfficeVerse dashboard</p>
+                </div>
+            </section>
+
+            <section class="welcome-card" aria-labelledby="welcome-title">
+                <div class="welcome-content">
+                    <h2 id="welcome-title">Welcome back, John!</h2>
+                    <p>Here's what's happening at your workplace today.</p>
+                </div>
+                <div class="welcome-illustration">
+                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                </div>
+            </section>
+
+            <section class="info-cards-grid" aria-label="Quick insights">
+                <article class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-calendar-check" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Today's Events</h3>
+                        <p class="card-stat">3 events</p>
+                        <p class="card-description">Team meeting at 2 PM, Project review at 4 PM</p>
+                        <a href="#" class="card-link">View all events</a>
+                    </div>
+                </article>
+                <article class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-chart-bar" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Stats Overview</h3>
+                        <p class="card-stat">85% productivity</p>
+                        <p class="card-description">Tasks completed this week</p>
+                        <a href="#" class="card-link">View details</a>
+                    </div>
+                </article>
+                <article class="info-card">
+                    <div class="card-icon">
+                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                    </div>
+                    <div class="card-content">
+                        <h3>Quick Links</h3>
+                        <p class="card-stat">8 resources</p>
+                        <p class="card-description">Frequently used tools and documents</p>
+                        <a href="#" class="card-link">Browse resources</a>
+                    </div>
+                </article>
+            </section>
+
+            <section id="events" aria-labelledby="events-title">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 id="events-title">Events</h1>
+                        <p>View and manage company events</p>
+                    </div>
+                </div>
+                <div class="events-layout">
+                    <div class="calendar-section" role="region" aria-label="Calendar">
+                        <div class="calendar-header">
+                            <h2>July 2025</h2>
+                            <div class="calendar-nav">
+                                <button class="nav-btn" aria-label="Previous month">
+                                    <i class="fas fa-chevron-left" aria-hidden="true"></i>
+                                </button>
+                                <button class="nav-btn" aria-label="Next month">
+                                    <i class="fas fa-chevron-right" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="calendar-grid" role="grid" aria-label="July 2025 calendar">
+                            <div class="calendar-day-header">Sun</div>
+                            <div class="calendar-day-header">Mon</div>
+                            <div class="calendar-day-header">Tue</div>
+                            <div class="calendar-day-header">Wed</div>
+                            <div class="calendar-day-header">Thu</div>
+                            <div class="calendar-day-header">Fri</div>
+                            <div class="calendar-day-header">Sat</div>
+                            <div class="calendar-day inactive" role="gridcell">29</div>
+                            <div class="calendar-day inactive" role="gridcell">30</div>
+                            <div class="calendar-day" role="gridcell">1</div>
+                            <div class="calendar-day" role="gridcell">2</div>
+                            <div class="calendar-day" role="gridcell">3</div>
+                            <div class="calendar-day" role="gridcell">4</div>
+                            <div class="calendar-day" role="gridcell">5</div>
+                            <div class="calendar-day" role="gridcell">6</div>
+                            <div class="calendar-day" role="gridcell">7</div>
+                            <div class="calendar-day" role="gridcell">8</div>
+                            <div class="calendar-day" role="gridcell">9</div>
+                            <div class="calendar-day" role="gridcell">10</div>
+                            <div class="calendar-day selected" role="gridcell" aria-selected="true">11</div>
+                            <div class="calendar-day" role="gridcell">12</div>
+                            <div class="calendar-day has-event" role="gridcell">13</div>
+                            <div class="calendar-day" role="gridcell">14</div>
+                            <div class="calendar-day has-event" role="gridcell">15</div>
+                            <div class="calendar-day" role="gridcell">16</div>
+                            <div class="calendar-day" role="gridcell">17</div>
+                            <div class="calendar-day" role="gridcell">18</div>
+                            <div class="calendar-day" role="gridcell">19</div>
+                            <div class="calendar-day" role="gridcell">20</div>
+                            <div class="calendar-day has-event" role="gridcell">21</div>
+                            <div class="calendar-day" role="gridcell">22</div>
+                            <div class="calendar-day" role="gridcell">23</div>
+                            <div class="calendar-day" role="gridcell">24</div>
+                            <div class="calendar-day" role="gridcell">25</div>
+                            <div class="calendar-day" role="gridcell">26</div>
+                            <div class="calendar-day" role="gridcell">27</div>
+                            <div class="calendar-day" role="gridcell">28</div>
+                            <div class="calendar-day" role="gridcell">29</div>
+                            <div class="calendar-day" role="gridcell">30</div>
+                            <div class="calendar-day" role="gridcell">31</div>
+                            <div class="calendar-day inactive" role="gridcell">1</div>
+                            <div class="calendar-day inactive" role="gridcell">2</div>
+                        </div>
+                    </div>
+                    <div class="events-list-section" role="region" aria-label="Events list">
+                        <div class="events-header">
+                            <h3>Events for July 11, 2025</h3>
+                            <button class="add-event-btn" aria-label="Add new event">
+                                <i class="fas fa-plus" aria-hidden="true"></i>
+                                Add Event
+                            </button>
+                        </div>
+                        <div class="events-list">
+                            <article class="event-item">
+                                <div class="event-time">
+                                    <span class="time">10:00 AM</span>
+                                    <span class="duration">1 hour</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Team Stand-up Meeting</h4>
+                                    <p>Daily sync with the development team</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                                            Conference Room A
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users" aria-hidden="true"></i>
+                                            8 attendees
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="event-item">
+                                <div class="event-time">
+                                    <span class="time">2:00 PM</span>
+                                    <span class="duration">2 hours</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Project Review Session</h4>
+                                    <p>Quarterly review of ongoing projects</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-video" aria-hidden="true"></i>
+                                            Video Conference
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users" aria-hidden="true"></i>
+                                            12 attendees
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+                            <article class="event-item">
+                                <div class="event-time">
+                                    <span class="time">4:30 PM</span>
+                                    <span class="duration">30 min</span>
+                                </div>
+                                <div class="event-details">
+                                    <h4>Coffee Break & Networking</h4>
+                                    <p>Informal networking session</p>
+                                    <div class="event-meta">
+                                        <span class="event-location">
+                                            <i class="fas fa-coffee" aria-hidden="true"></i>
+                                            Cafeteria
+                                        </span>
+                                        <span class="event-attendees">
+                                            <i class="fas fa-users" aria-hidden="true"></i>
+                                            All welcome
+                                        </span>
+                                    </div>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="announcements" aria-labelledby="announcements-title">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 id="announcements-title">Announcements</h1>
+                        <p>Stay updated with company news and updates</p>
+                    </div>
+                    <button class="add-announcement-btn" aria-label="Add new announcement">
+                        <i class="fas fa-plus" aria-hidden="true"></i>
+                        Add Announcement
+                    </button>
+                </div>
+                <div class="announcements-container">
+                    <article class="announcement-card priority-high">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <span class="priority-badge">High Priority</span>
+                                <time class="announcement-date" datetime="2025-07-10">July 10, 2025</time>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn" aria-label="Bookmark announcement">
+                                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Share announcement">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Office Closure - July 15th</h3>
+                        <div class="announcement-author">
+                            <img src="https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                                alt="HR Department - Formal Team Meeting" />
+
+                            <span class="author-name">HR Department</span>
+                        </div>
+                        <p class="announcement-content">
+                            Please note that the office will be closed on July 15th for facility maintenance.
+                            All employees are requested to work from home on this day. Regular operations will resume on
+                            July 16th.
+                        </p>
+                        <div class="announcement-footer">
+                            <button class="read-more" aria-label="Read more about office closure">Read more</button>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    24
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    8
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <time class="announcement-date" datetime="2025-07-09">July 9, 2025</time>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn" aria-label="Bookmark announcement">
+                                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Share announcement">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>New Employee Wellness Program</h3>
+                        <div class="announcement-author">
+                            <img src="https://images.pexels.com/photos/4050319/pexels-photo-4050319.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                                alt="Wellness Committee - Calm Plant-filled Workspace" />
+
+
+                            <span class="author-name">Wellness Committee</span>
+                        </div>
+                        <p class="announcement-content">
+                            We're excited to announce the launch of our new employee wellness program!
+                            This includes gym memberships, mental health resources, and flexible work arrangements.
+                        </p>
+                        <div class="announcement-footer">
+                            <button class="read-more" aria-label="Read more about wellness program">Read more</button>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    56
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    15
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <time class="announcement-date" datetime="2025-07-08">July 8, 2025</time>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn" aria-label="Bookmark announcement">
+                                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Share announcement">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Q3 Performance Reviews</h3>
+                        <div class="announcement-author">
+
+
+                            <img src="https://images.pexels.com/photos/1181406/pexels-photo-1181406.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                                alt="Management Team - Boardroom Discussion" />
+
+                            <span class="author-name">Management Team</span>
+                        </div>
+                        <p class="announcement-content">
+                            Q3 performance reviews will begin next week. Please ensure all self-assessments
+                            are completed by July 20th. Schedule meetings with your direct supervisor by July 18th.
+                        </p>
+                        <div class="announcement-footer">
+                            <button class="read-more" aria-label="Read more about performance reviews">Read
+                                more</button>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    18
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    6
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <time class="announcement-date" datetime="2025-07-07">July 7, 2025</time>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn" aria-label="Bookmark announcement">
+                                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Share announcement">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Technology Upgrade Schedule</h3>
+                        <div class="announcement-author">
+                            <img src="https://images.pexels.com/photos/3861969/pexels-photo-3861969.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                                alt="IT Department - Developer at Work" />
+
+                            <span class="author-name">IT Department</span>
+                        </div>
+                        <p class="announcement-content">
+                            We will be upgrading our network infrastructure over the weekend.
+                            There may be brief internet outages on Saturday between 2-4 AM. All systems should be fully
+                            operational by Monday morning.
+                        </p>
+                        <div class="announcement-footer">
+                            <button class="read-more" aria-label="Read more about technology upgrade">Read more</button>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    12
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    3
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="announcement-card">
+                        <div class="announcement-header">
+                            <div class="announcement-meta">
+                                <time class="announcement-date" datetime="2025-07-05">July 5, 2025</time>
+                            </div>
+                            <div class="announcement-actions">
+                                <button class="action-btn" aria-label="Bookmark announcement">
+                                    <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                </button>
+                                <button class="action-btn" aria-label="Share announcement">
+                                    <i class="fas fa-share" aria-hidden="true"></i>
+                                </button>
+                            </div>
+                        </div>
+                        <h3>Company Summer BBQ</h3>
+                        <div class="announcement-author">
+                            <img src="https://images.pexels.com/photos/1643383/pexels-photo-1643383.jpeg?auto=compress&cs=tinysrgb&h=300&w=300"
+                                alt="Social Committee - Team Enjoying Office Event" />
+
+                            <span class="author-name">Social Committee</span>
+                        </div>
+                        <p class="announcement-content">
+                            Join us for our annual summer BBQ on July 25th at City Park!
+                            Food, games, and fun activities for the whole family. RSVP by July 20th.
+                        </p>
+                        <div class="announcement-footer">
+                            <button class="read-more" aria-label="Read more about summer BBQ">Read more</button>
+                            <div class="engagement">
+                                <span class="likes">
+                                    <i class="fas fa-heart" aria-hidden="true"></i>
+                                    89
+                                </span>
+                                <span class="comments">
+                                    <i class="fas fa-comment" aria-hidden="true"></i>
+                                    34
+                                </span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="directory" aria-labelledby="directory-title">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 id="directory-title">Employee Directory</h1>
+                        <p>Find and connect with your colleagues</p>
+                    </div>
+                </div>
+                <div class="directory-filters">
+                    <div class="filter-group">
+                        <label for="department-filter" class="visually-hidden">Filter by department</label>
+                        <select id="department-filter" class="filter-select">
+                            <option value="">All Departments</option>
+                            <option value="engineering">Engineering</option>
+                            <option value="design">Design</option>
+                            <option value="marketing">Marketing</option>
+                            <option value="sales">Sales</option>
+                            <option value="hr">Human Resources</option>
+                            <option value="finance">Finance</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="role-filter" class="visually-hidden">Filter by role</label>
+                        <select id="role-filter" class="filter-select">
+                            <option value="">All Roles</option>
+                            <option value="manager">Manager</option>
+                            <option value="senior">Senior</option>
+                            <option value="junior">Junior</option>
+                            <option value="intern">Intern</option>
+                        </select>
+                    </div>
+                    <div class="filter-group">
+                        <label for="location-filter" class="visually-hidden">Filter by location</label>
+                        <select id="location-filter" class="filter-select">
+                            <option value="">All Locations</option>
+                            <option value="office">Office</option>
+                            <option value="remote">Remote</option>
+                            <option value="hybrid">Hybrid</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="employee-grid">
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/65.jpg" alt="Profile 1">
+                            <div class="status-indicator online" aria-label="Online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Alice Smith</h3>
+                            <p class="employee-role">Senior Software Engineer</p>
+                            <p class="employee-department">Engineering</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:alice.smith@company.com">alice.smith@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15551234567">+1 (555) 123-4567</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Alice Smith">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Alice Smith">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/44.jpg" alt="Profile 2">
+                            <div class="status-indicator busy" aria-label="Busy"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Bob Johnson</h3>
+                            <p class="employee-role">Product Manager</p>
+                            <p class="employee-department">Product</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:bob.johnson@company.com">bob.johnson@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15552345678">+1 (555) 234-5678</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Bob Johnson">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Bob Johnson">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/32.jpg" alt="Profile 4">
+                            <div class="status-indicator offline" aria-label="Offline"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Carol Davis</h3>
+                            <p class="employee-role">UX Designer</p>
+                            <p class="employee-department">Design</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:carol.davis@company.com">carol.davis@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15553456789">+1 (555) 345-6789</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Carol Davis">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Carol Davis">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/75.jpg" alt="Profile 3">
+                            <div class="status-indicator offline" aria-label="Offline"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>David Wilson</h3>
+                            <p class="employee-role">Marketing Manager</p>
+                            <p class="employee-department">Marketing</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:david.wilson@company.com">david.wilson@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15554567890">+1 (555) 456-7890</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message David Wilson">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call David Wilson">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/47.jpg" alt="Profile 8">
+
+                            <div class="status-indicator busy" aria-label="Busy"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Emma Martinez</h3>
+                            <p class="employee-role">HR Specialist</p>
+                            <p class="employee-department">Human Resources</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:emma.martinez@company.com">emma.martinez@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15555678901">+1 (555) 567-8901</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Emma Martinez">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Emma Martinez">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/22.jpg" alt="Profile 5">
+                            <div class="status-indicator online" aria-label="Online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Frank Taylor</h3>
+                            <p class="employee-role">Sales Representative</p>
+                            <p class="employee-department">Sales</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:frank.taylor@company.com">frank.taylor@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15556789012">+1 (555) 678-9012</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Frank Taylor">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Frank Taylor">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/women/12.jpg" alt="Profile 10">
+                            <div class="status-indicator offline" aria-label="Offline"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Grace Anderson</h3>
+                            <p class="employee-role">Financial Analyst</p>
+                            <p class="employee-department">Finance</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:grace.anderson@company.com">grace.anderson@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15557890123">+1 (555) 789-0123</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Grace Anderson">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Grace Anderson">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="employee-card">
+                        <div class="employee-avatar">
+                            <img src="https://randomuser.me/api/portraits/men/18.jpg" alt="Profile 9">
+                            <div class="status-indicator online" aria-label="Online"></div>
+                        </div>
+                        <div class="employee-info">
+                            <h3>Henry Brown</h3>
+                            <p class="employee-role">DevOps Engineer</p>
+                            <p class="employee-department">Engineering</p>
+                            <div class="employee-contact">
+                                <span class="contact-item">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                    <a href="mailto:henry.brown@company.com">henry.brown@company.com</a>
+                                </span>
+                                <span class="contact-item">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+                                    <a href="tel:+15558901234">+1 (555) 890-1234</a>
+                                </span>
+                            </div>
+                            <div class="employee-actions">
+                                <button class="action-btn primary" aria-label="Message Henry Brown">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+
+                                </button>
+                                <button class="action-btn" aria-label="Call Henry Brown">
+                                    <i class="fas fa-phone" aria-hidden="true"></i>
+
+                                </button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section id="resources" aria-labelledby="resources-title">
+                <div class="page-header">
+                    <div class="page-header-content">
+                        <h1 id="resources-title">Resources</h1>
+                        <p>Access company tools, documents, and helpful resources</p>
+                    </div>
+                </div>
+                <div class="resource-categories">
+                    <div class="category-section" aria-labelledby="business-tools-title">
+                        <h2 id="business-tools-title">
+                            <i class="fas fa-tools" aria-hidden="true"></i>
+                            Business Tools
+                        </h2>
+                        <div class="resource-grid">
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-envelope" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Email Portal</h3>
+                                    <p>Access your company email account and manage messages</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">External Tool</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Open Email Portal">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Open
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Email Portal">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-project-diagram" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Project Management</h3>
+                                    <p>Track projects, assign tasks, and collaborate with teams</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Web App</span>
+                                        <span class="resource-access">Team Leads</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Open Project Management">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Open
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Project Management">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-chart-line" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Analytics Dashboard</h3>
+                                    <p>View business metrics, reports, and performance data</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Dashboard</span>
+                                        <span class="resource-access">Managers</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Open Analytics Dashboard">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Open
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Analytics Dashboard">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-comments" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Team Chat</h3>
+                                    <p>Instant messaging and group communication platform</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Chat App</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Open Team Chat">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Open
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Team Chat">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="category-section" aria-labelledby="documents-title">
+                        <h2 id="documents-title">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i>
+                            Documents & Templates
+                        </h2>
+                        <div class="resource-grid">
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-contract" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Employee Handbook</h3>
+                                    <p>Complete guide to company policies and procedures</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">PDF Document</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Download Employee Handbook">
+                                        <i class="fas fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </a>
+                                    <button class="resource-btn" aria-label="Preview Employee Handbook">
+                                        <i class="fas fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-file-invoice" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Expense Report Template</h3>
+                                    <p>Standard template for submitting business expenses</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Excel Template</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary"
+                                        aria-label="Download Expense Report Template">
+                                        <i class="fas fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </a>
+                                    <button class="resource-btn" aria-label="Preview Expense Report Template">
+                                        <i class="fas fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-presentation" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Brand Guidelines</h3>
+                                    <p>Logo usage, color palette, and brand identity guidelines</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Design Guide</span>
+                                        <span class="resource-access">Marketing Team</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Download Brand Guidelines">
+                                        <i class="fas fa-download" aria-hidden="true"></i>
+                                        Download
+                                    </a>
+                                    <button class="resource-btn" aria-label="Preview Brand Guidelines">
+                                        <i class="fas fa-eye" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="category-section" aria-labelledby="training-title">
+                        <h2 id="training-title">
+                            <i class="fas fa-graduation-cap" aria-hidden="true"></i>
+                            Training & Development
+                        </h2>
+                        <div class="resource-grid">
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-play-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>New Employee Orientation</h3>
+                                    <p>Welcome course for new team members</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Video Course</span>
+                                        <span class="resource-access">New Hires</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary"
+                                        aria-label="Start New Employee Orientation Course">
+                                        <i class="fas fa-play" aria-hidden="true"></i>
+                                        Start Course
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark New Employee Orientation">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-shield-alt" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Security Training</h3>
+                                    <p>Cybersecurity awareness and best practices</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Interactive Course</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary"
+                                        aria-label="Start Security Training Course">
+                                        <i class="fas fa-play" aria-hidden="true"></i>
+                                        Start Course
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Security Training">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-code" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Technical Skills Library</h3>
+                                    <p>Programming tutorials and development resources</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Learning Portal</span>
+                                        <span class="resource-access">Engineering Team</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary"
+                                        aria-label="Browse Technical Skills Library">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Browse
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Technical Skills Library">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                    <div class="category-section" aria-labelledby="support-title">
+                        <h2 id="support-title">
+                            <i class="fas fa-life-ring" aria-hidden="true"></i>
+                            Support & Help
+                        </h2>
+                        <div class="resource-grid">
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-question-circle" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Help Desk</h3>
+                                    <p>Submit IT support tickets and track issues</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Support Portal</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Submit IT support ticket">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Submit Ticket
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Help Desk">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                            <article class="resource-card">
+                                <div class="resource-icon">
+                                    <i class="fas fa-book" aria-hidden="true"></i>
+                                </div>
+                                <div class="resource-content">
+                                    <h3>Knowledge Base</h3>
+                                    <p>Frequently asked questions and how-to guides</p>
+                                    <div class="resource-meta">
+                                        <span class="resource-type">Documentation</span>
+                                        <span class="resource-access">All Employees</span>
+                                    </div>
+                                </div>
+                                <div class="resource-actions">
+                                    <a href="#" class="resource-btn primary" aria-label="Browse Knowledge Base">
+                                        <i class="fas fa-external-link-alt" aria-hidden="true"></i>
+                                        Browse
+                                    </a>
+                                    <button class="resource-btn" aria-label="Bookmark Knowledge Base">
+                                        <i class="fas fa-bookmark" aria-hidden="true"></i>
+                                    </button>
+                                </div>
+                            </article>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <div class="overlay" id="overlay" aria-hidden="true"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
